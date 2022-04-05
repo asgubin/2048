@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>634</width>
+    <height>473</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Game 2048</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(232, 232, 232);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);
+border-radius: 10px;</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="1" column="0">
+        <widget class="QLabel" name="a10">
+         <property name="minimumSize">
+          <size>
+           <width>105</width>
+           <height>105</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>ISOCPEUR</family>
+           <pointsize>48</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 10px;
+background-color: rgb(255, 140, 0);
+font: 48pt &quot;ISOCPEUR&quot;;
+font-weight: 600;</string>
+         </property>
+         <property name="text">
+          <string>32</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QLabel" name="a22">
+         <property name="minimumSize">
+          <size>
+           <width>105</width>
+           <height>105</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>ISOCPEUR</family>
+           <pointsize>30</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 10px;
+background-color: rgb(255, 180, 225);
+font: 30pt &quot;ISOCPEUR&quot;;
+font-weight: 600;</string>
+         </property>
+         <property name="text">
+          <string>2048</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QLabel" name="a03">
+         <property name="minimumSize">
+          <size>
+           <width>105</width>
+           <height>105</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>ISOCPEUR</family>
+           <pointsize>48</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 10px;
+background-color: rgb(255, 151, 120);
+font: 48pt &quot;ISOCPEUR&quot;;
+font-weight: 600;</string>
+         </property>
+         <property name="text">
+          <string>16</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="a00">
+         <property name="minimumSize">
+          <size>
+           <width>105</width>
+           <height>105</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>ISOCPEUR</family>
+           <pointsize>48</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 10px;
+background-color: rgb(225, 225, 180);
+font: 48pt &quot;ISOCPEUR&quot;;
+font-weight: 600;</string>
+         </property>
+         <property name="text">
+          <string>2</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="a02">
+         <property name="minimumSize">
+          <size>
+           <width>105</width>
+           <height>105</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>ISOCPEUR</family>
+           <pointsize>48</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 10px;
+background-color:rgb(255, 183, 124);
+font: 48pt &quot;ISOCPEUR&quot;;
+font-weight: 600;
+</string>
+         </property>
+         <property name="text">
+          <string>8</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLabel" name="a31">
+         <property name="minimumSize">
+          <size>
+           <width>105</width>
+           <height>105</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>ISOCPEUR</family>
+           <pointsize>48</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 10px;
+background-color: rgb(204, 204, 153);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QLabel" name="a13">
+         <property name="minimumSize">
+          <size>
+           <width>105</width>
+           <height>105</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>ISOCPEUR</family>
+           <pointsize>38</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 10px;
+background-color:rgb(208, 255, 201);
+font: 38pt &quot;ISOCPEUR&quot;;
+font-weight: 600;</string>
+         </property>
+         <property name="text">
+          <string>256</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLabel" name="a21">
+         <property name="minimumSize">
+          <size>
+           <width>105</width>
+           <height>105</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>ISOCPEUR</family>
+           <pointsize>30</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 10px;
+background-color: rgb(161, 255, 22);
+font: 30pt &quot;ISOCPEUR&quot;;
+font-weight: 600;</string>
+         </property>
+         <property name="text">
+          <string>1024</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="a20">
+         <property name="minimumSize">
+          <size>
+           <width>105</width>
+           <height>105</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>ISOCPEUR</family>
+           <pointsize>38</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 10px;
+background-color: rgb(167, 202, 255);
+font: 38pt &quot;ISOCPEUR&quot;;
+font-weight: 600;</string>
+         </property>
+         <property name="text">
+          <string>512</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="3">
+        <widget class="QLabel" name="a23">
+         <property name="minimumSize">
+          <size>
+           <width>105</width>
+           <height>105</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>ISOCPEUR</family>
+           <pointsize>48</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 10px;
+background-color: rgb(204, 204, 153);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <widget class="QLabel" name="a32">
+         <property name="minimumSize">
+          <size>
+           <width>105</width>
+           <height>105</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>ISOCPEUR</family>
+           <pointsize>48</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 10px;
+background-color: rgb(204, 204, 153);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="a30">
+         <property name="minimumSize">
+          <size>
+           <width>105</width>
+           <height>105</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>ISOCPEUR</family>
+           <pointsize>48</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 10px;
+background-color: rgb(204, 204, 153);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLabel" name="a11">
+         <property name="minimumSize">
+          <size>
+           <width>105</width>
+           <height>105</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>ISOCPEUR</family>
+           <pointsize>48</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 10px;
+background-color: rgb(255, 100, 20);
+font: 48pt &quot;ISOCPEUR&quot;;
+font-weight: 600;</string>
+         </property>
+         <property name="text">
+          <string>64</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLabel" name="a12">
+         <property name="minimumSize">
+          <size>
+           <width>105</width>
+           <height>105</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>ISOCPEUR</family>
+           <pointsize>38</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 10px;
+background-color: rgb(255, 255, 127);
+font: 38pt &quot;ISOCPEUR&quot;;
+font-weight: 600;</string>
+         </property>
+         <property name="text">
+          <string>128</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="a01">
+         <property name="minimumSize">
+          <size>
+           <width>105</width>
+           <height>105</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>ISOCPEUR</family>
+           <pointsize>48</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 10px;
+background-color: rgb(180, 180, 190);
+font: 48pt &quot;ISOCPEUR&quot;;
+font-weight: 600;</string>
+         </property>
+         <property name="text">
+          <string>4</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="3">
+        <widget class="QLabel" name="a33">
+         <property name="minimumSize">
+          <size>
+           <width>105</width>
+           <height>105</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>ISOCPEUR</family>
+           <pointsize>48</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 10px;
+background-color: rgb(204, 204, 153);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="minimumSize">
+       <size>
+        <width>150</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);
+border-radius: 10px;</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QGroupBox" name="groupBox_6">
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QLabel" name="score_label">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 16pt &quot;ISOCPEUR&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Score</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="score">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>ISOCPEUR</family>
+              <pointsize>28</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-radius: 10px;
+background-color: rgb(255, 201, 107);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_3">
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QLabel" name="highScore_label">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 16pt &quot;ISOCPEUR&quot;;</string>
+            </property>
+            <property name="text">
+             <string>High Score</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="highScore">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>ISOCPEUR</family>
+              <pointsize>28</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-radius: 10px;
+background-color: rgb(255, 201, 107);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_5">
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QPushButton" name="Restart">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-radius: 10px;
+font: italic 12pt &quot;ISOCPEUR&quot;;
+background-color: rgb(255, 85, 0);</string>
+            </property>
+            <property name="text">
+             <string>Restart</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="Exit">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-radius: 10px;
+font: italic 12pt &quot;ISOCPEUR&quot;;
+background-color: rgb(255, 85, 0);</string>
+            </property>
+            <property name="text">
+             <string>Exit</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>Exit</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>575</x>
+     <y>431</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>476</x>
+     <y>468</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
